@@ -24,8 +24,8 @@ describe('Parse number edge cases', () => {
     expect(repairJson('{"key": 10-20}')).toBe('{"key": "10-20"}');
     expect(repairJson('{"key": 1.1.1}')).toBe('{"key": "1.1.1"}');
     expect(repairJson('[- ')).toBe('[]');
-    expect(repairJson('{"key": 1. }')).toBe('{"key": 1.0}');
-    expect(repairJson('{"key": 1e10 }')).toBe('{"key": 10000000000.0}');
+    expect(repairJson('{"key": 1. }')).toBe('{"key": 1}');
+    expect(repairJson('{"key": 1e10 }')).toBe('{"key": 10000000000}');
     expect(repairJson('{"key": 1e }')).toBe('{"key": 1}');
     expect(repairJson('{"key": 1notanumber }')).toBe('{"key": "1notanumber"}');
     expect(repairJson('[1, 2notanumber]')).toBe('[1, "2notanumber"]');

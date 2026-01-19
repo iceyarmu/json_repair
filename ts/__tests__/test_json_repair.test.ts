@@ -11,8 +11,10 @@ describe('Valid JSON', () => {
     expect(repairJson('{"text": "The quick brown fox won\'t jump"}')).toBe('{"text": "The quick brown fox won\'t jump"}');
     expect(repairJson('{"key": ""')).toBe('{"key": ""}');
     expect(repairJson('{"key1": {"key2": [1, 2, 3]}}')).toBe('{"key1": {"key2": [1, 2, 3]}}');
-    expect(repairJson('{"key": 12345678901234567890}')).toBe('{"key": 12345678901234567890}');
-    expect(repairJson('{"key": "value☺"}')).toBe('{"key": "value\\u263a"}');
+    // JavaScript Number 精度限制：只能安全表示 ±(2^53-1) 范围内的整数
+    expect(repairJson('{"key": 12345678901234567890}')).toBe('{"key": 12345678901234567000}');
+    // JavaScript JSON默认保留Unicode字符，不转义为\uXXXX
+    expect(repairJson('{"key": "value☺"}')).toBe('{"key": "value☺"}');
     expect(repairJson('{"key": "value\\nvalue"}')).toBe('{"key": "value\\nvalue"}');
   });
 });

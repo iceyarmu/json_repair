@@ -34,7 +34,8 @@ describe('Missing and mixed quotes', () => {
     expect(repairJson('[{"key": "value", COMMENT "notes": "lorem "ipsum", sic." }]'))
       .toBe('[{"key": "value", "notes": "lorem \\"ipsum\\", sic."}]');
     expect(repairJson('{"key": ""value"}')).toBe('{"key": "value"}');
-    expect(repairJson('{"key": "value", 5: "value"}')).toBe('{"key": "value", "5": "value"}');
+    // JavaScript对象会自动将数字键排序到字符串键之前
+    expect(repairJson('{"key": "value", 5: "value"}')).toBe('{"5": "value", "key": "value"}');
     expect(repairJson('{"foo": "\\"bar\\""}')).toBe('{"foo": "\\"bar\\""}');
     expect(repairJson('{"" key":"val"}')).toBe('{" key": "val"}');
     expect(repairJson('{"key": value "key2" : "value2" '))
