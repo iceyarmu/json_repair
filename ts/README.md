@@ -18,13 +18,13 @@ This library can fix invalid JSON strings, which is especially useful when deali
 ## Installation
 
 ```bash
-npm install json-repair-ts
+npm install @yarmu/json-repair
 ```
 
 ## Usage
 
 ```typescript
-import { repairJson, loads } from 'json-repair-ts';
+import { repairJson, loads } from '@yarmu/json-repair';
 
 // Repair and return as string
 const fixed = repairJson('{"name": "John", "age": 30');
@@ -89,7 +89,7 @@ Read and repair JSON from a file.
 ## Examples
 
 ```typescript
-import { repairJson, loads } from 'json-repair-ts';
+import { repairJson, loads } from '@yarmu/json-repair';
 
 // Missing closing brace
 repairJson('{"name": "John"'); // '{"name": "John"}'

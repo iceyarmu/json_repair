@@ -22,7 +22,7 @@ This will compile TypeScript to JavaScript in the `dist/` directory.
 ```typescript
 import { repairJson, loads } from './src/index';
 // or after publishing to npm:
-// import { repairJson, loads } from 'json-repair-ts';
+// import { repairJson, loads } from '@yarmu/json-repair';
 ```
 
 ### 2. Repair JSON string

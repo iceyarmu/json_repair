@@ -133,7 +133,7 @@ obj = loads(bad_json, skip_json_loads=True)
 
 **TypeScript:**
 ```typescript
-import { repairJson, loads } from 'json-repair-ts';
+import { repairJson, loads } from '@yarmu/json-repair';
 
 const result = repairJson(badJson, { returnObjects: true, logging: true });
 const obj = loads(badJson, { skipJsonParse: true });
@@ -224,7 +224,7 @@ The code is:
 ## Usage Example
 
 ```typescript
-import { repairJson, loads } from 'json-repair-ts';
+import { repairJson, loads } from '@yarmu/json-repair';
 
 // Simple repair
 const fixed = repairJson('{"name": "John", "age": 30');

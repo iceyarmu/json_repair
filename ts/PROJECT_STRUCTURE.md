@@ -189,7 +189,7 @@ obj = loads('{"name": "John"')
 
 **TypeScript:**
 ```typescript
-import { repairJson, loads } from 'json-repair-ts';
+import { repairJson, loads } from '@yarmu/json-repair';
 
 const fixed = repairJson('{"name": "John"');
 const obj = loads('{"name": "John"');

@@ -1,6 +1,6 @@
 {
-  "name": "json-repair-ts",
-  "version": "1.0.0",
+  "name": "@yarmu/json-repair",
+  "version": "1.0.1",
   "description": "TypeScript implementation of json-repair - Fix invalid JSON strings",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -17,10 +17,21 @@
     "fix",
     "parse",
     "llm",
-    "invalid"
+    "invalid",
+    "malformed",
+    "typescript"
   ],
-  "author": "",
+  "author": "yarmu",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iceyarmu/json_repair.git",
+    "directory": "ts"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "devDependencies": {
     "@types/jest": "^29.5.0",
     "@types/node": "^20.0.0",
