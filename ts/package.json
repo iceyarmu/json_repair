@@ -1,9 +1,14 @@
 {
   "name": "@yarmu/json-repair",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "TypeScript implementation of json-repair - Fix invalid JSON strings",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist/",
+    "README.md",
+    "examples/"
+  ],
   "scripts": {
     "build": "tsc",
     "test": "jest",

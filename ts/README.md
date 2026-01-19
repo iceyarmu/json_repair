@@ -4,7 +4,7 @@ A complete TypeScript port of the popular [json-repair](https://github.com/mangi
 
 This library can fix invalid JSON strings, which is especially useful when dealing with LLM outputs that may have malformed JSON.
 
-**✅ 100% Feature Parity** | **✅ 150+ Tests** | **✅ Fully Type-Safe** | **✅ Production Ready**
+**✅ 100% Feature Parity** | **✅ Fully Type-Safe** | **✅ Production Ready**
 
 ## Features
 
@@ -121,45 +121,6 @@ try {
   console.error('Duplicate keys found!');
 }
 ```
-
-## Testing
-
-This project includes a comprehensive test suite with **150+ test cases** covering all functionality.
-
-### Run Tests
-
-```bash
-# Install dependencies
-npm install
-
-# Run all tests
-npm test
-
-# Run tests with coverage
-npm run test:coverage
-
-# Run tests in watch mode
-npm run test:watch
-```
-
-### Test Coverage
-
-- **8 test files** covering all modules
-- **150+ test cases** ported from Python version
-- **>90% code coverage** target
-- All edge cases and error conditions tested
-
-For detailed testing information, see [TESTING_GUIDE.md](TESTING_GUIDE.md) and [TEST_SUMMARY.md](TEST_SUMMARY.md).
-
-## Documentation
-
-- [README.md](README.md) - This file
-- [QUICKSTART.md](QUICKSTART.md) - Quick start guide
-- [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md) - Project architecture
-- [IMPLEMENTATION_SUMMARY.md](IMPLEMENTATION_SUMMARY.md) - Implementation details
-- [TESTING_GUIDE.md](TESTING_GUIDE.md) - Testing instructions
-- [TEST_SUMMARY.md](TEST_SUMMARY.md) - Test coverage details
-- [COMPLETE_SUMMARY.md](COMPLETE_SUMMARY.md) - Complete project summary
 
 ## License
 
