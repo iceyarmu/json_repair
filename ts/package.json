@@ -1,0 +1,31 @@
+{
+  "name": "json-repair-ts",
+  "version": "1.0.0",
+  "description": "TypeScript implementation of json-repair - Fix invalid JSON strings",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "json",
+    "repair",
+    "fix",
+    "parse",
+    "llm",
+    "invalid"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.0.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.0.0"
+  }
+}
